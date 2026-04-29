@@ -10,14 +10,21 @@
 
   <ItemGroup>
     <None Remove="Image.webp" />
-    <None Remove="pictures\Image.webp" />
+    <None Remove="Image\Cesto.png" />
+    <None Remove="Image\Ketchup.png" />
+    <None Remove="Image\Syr.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Image.webp" />
-    <Content Include="pictures\Image.webp">
+    <Resource Include="Image\Cesto.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </Resource>
+    <Resource Include="Image\Ketchup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\Syr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

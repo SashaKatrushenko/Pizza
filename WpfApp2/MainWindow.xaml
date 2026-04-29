@@ -11,15 +11,19 @@
         <ListBox Name="OrderList" HorizontalAlignment="Left" Height="341" Margin="583,0,0,0" VerticalAlignment="Center" Width="207" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <Button Content="Peperoni" HorizontalAlignment="Left" Height="50" Margin="435,0,0,0" VerticalAlignment="Center" Width="100" RenderTransformOrigin="0.752,0.358" FontSize="18" FontFamily="Bahnschrift SemiBold" Background="#FFFFA2BA" Foreground="#FFDF055C" BorderBrush="Black"/>
         <Button Content="Cheese" Click="Cheese_Click" HorizontalAlignment="Left" Height="50" Margin="435,122,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.787,0.456" FontSize="18" BorderBrush="Black" Foreground="Black" Background="#FFFAE624" FontFamily="Bahnschrift SemiBold"/>
-        <Button Content="Ketchup" HorizontalAlignment="Left" Height="50" Margin="435,47,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.81,0.451" Background="#FFE63838" BorderBrush="Black" Foreground="White" FontSize="20" FontFamily="Bahnschrift SemiBold"/>
+        <Button Content="Ketchup" HorizontalAlignment="Left" Height="50" Margin="435,47,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.81,0.451" Background="#FFE63838" BorderBrush="Black" Foreground="White" FontSize="20" Click="Ketchup_Click" FontFamily="Bahnschrift SemiBold"/>
         <Button Content="Paprika" HorizontalAlignment="Left" Height="50" Margin="435,265,0,0" VerticalAlignment="Top" Width="100" FontSize="18" FontFamily="Bahnschrift SemiBold" Background="#FF1BE000" Foreground="Black" BorderBrush="Black"/>
             <Button Content="Mushroom" HorizontalAlignment="Left" Height="50" Margin="435,338,0,0" VerticalAlignment="Top" Width="100" FontSize="18" FontFamily="Bahnschrift SemiBold" Background="#FFDDB892" BorderBrush="Black" Foreground="#FF6A4F32"/>
             <Button Content="Ready" Click="Send_Click" HorizontalAlignment="Left" Height="30" Margin="214,356,0,0" VerticalAlignment="Top" Width="140" FontSize="18" Background="#FF4BFF42" Foreground="Black" BorderBrush="Black" FontFamily="MS Reference Sans Serif"/>
             <Button Content="Clean" HorizontalAlignment="Left" Height="30" Margin="60,356,0,0" VerticalAlignment="Top" Width="140" FontSize="18" FontFamily="MS Reference Sans Serif" Background="#FFFF2020" Foreground="Black" BorderBrush="Black"/>
-        <Canvas HorizontalAlignment="Left" Height="281" Margin="60,47,0,0" VerticalAlignment="Top" Width="294"/>
-            <ProgressBar Name="XPBar" HorizontalAlignment="Left" Minimum="0" Maximum="100" Height="42" Margin="45,0,0,0" VerticalAlignment="Top" Width="330"/>
+        <ProgressBar Name="XPBar" HorizontalAlignment="Left" Minimum="0" Maximum="100" Height="42" Margin="45,0,0,0" VerticalAlignment="Top" Width="330"/>
             <TextBlock HorizontalAlignment="Left" Height="26" Margin="583,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" FontSize="18" FontFamily="Arial Black"><Run Text="      "/><Run Language="en-au" Text=" "/><Run Text="List of order"/></TextBlock>
             <TextBlock HorizontalAlignment="Left" Height="37" Margin="-5,10,0,0" TextWrapping="Wrap" Text="  XP" VerticalAlignment="Top" Width="45" FontSize="22" FontFamily="Copperplate Gothic Bold"/>
 
+        <Canvas x:Name="PizzaCanvas"  HorizontalAlignment="Left" Height="282" Margin="63,51,0,0" VerticalAlignment="Top" Width="294"/>
+        <Image x:Name="Cesto" Margin="63,51,443,101" Source="Image/Cesto.png" Stretch="Fill" />
+        <Image x:Name="Ketchup" Margin="67,52,439,101" Stretch="Fill"/>
+        <Image x:Name="Syr"  Margin="63,51,443,101" Stretch="Fill"/>
     </Grid>
 </Window>
+    

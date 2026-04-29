@@ -19,13 +19,36 @@ namespace WpfApp2
     {
         Order currentOrder;
         List<Ingridient> currentPizza = new List<Ingridient>();
+        Random random = new Random();
+        
         public MainWindow()
         {
             InitializeComponent();
             currentOrder = GenerateOrder();
             ShowOrder();
             List<Ingridient> currentPizza = new List<Ingridient>();
+           
+        }
+        void AddCheese()
+        {
+            Image Syr = new Image();
+            
+                Syr.Width = 40;
+                Syr.Height = 40;
+                Syr.Source = new BitmapImage(new Uri("Image/syr.png", UriKind.Relative));
+            
+            double x = random.Next(20, 240);
+            double y = random.Next(20, 240);
 
+            Canvas.SetLeft(Syr, x);
+            Canvas.SetTop(Syr, y);
+
+            PizzaCanvas.Children.Add(Syr);
+        }
+        private void Cheese_Click(object sender, RoutedEventArgs e)
+        {
+            AddIngredient("Cheese");
+            AddCheese();
         }
         Order GenerateOrder()
         {
@@ -56,10 +79,7 @@ namespace WpfApp2
                 currentPizza.Add(new Ingridient { Name = name, Count = 1 });
         }
 
-        private void Cheese_Click(object sender, RoutedEventArgs e)
-        {
-            AddIngredient("Cheese");
-        }
+
         bool CheckOrder()
         {
             foreach (var item in currentOrder.Ingridients)
@@ -90,6 +110,11 @@ namespace WpfApp2
             currentPizza.Clear();
             currentOrder = GenerateOrder();
             ShowOrder();
+        }
+
+        private void Ketchup_Click(object sender, RoutedEventArgs e)
+        {
+            Cesto.Source = new BitmapImage(new Uri("Image/Ketchup.png", UriKind.Relative));
         }
 
     }
